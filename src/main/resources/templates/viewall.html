@@ -2,14 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>View All Students</title>
-	<link rel="stylesheet" href="../static/css/jquery.dataTables.min.css"></link>
-	<script src="/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" th:href="@{/css/jquery.dataTables.min.css}"></link>
 	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.dataTables.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('table-mhs').DataTable();
+			$('#table-mhs').DataTable();
 		});
 	</script>
+	<div th:replace="fragments/fragment :: title('Student View All')"></div>
 </head>
 <body>
 	<h1>All Students</h1>
